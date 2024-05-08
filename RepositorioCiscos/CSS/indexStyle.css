@@ -1,0 +1,28 @@
+.unu{
+    text-align: center;
+    background-color: aqua;
+
+}
+
+.sub{
+    text-align: center;
+}
+
+.integrantes{
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    margin-bottom: 20px;
+}
+
+.tabla{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+body{
+    background-color: antiquewhite;
+}
