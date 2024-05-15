@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.center {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+h1 {
+    color: #cb0404;
+    font-family: cursive
+  }
+
+p{
+    color: #e70b0b;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.DMCT{
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    }
+
