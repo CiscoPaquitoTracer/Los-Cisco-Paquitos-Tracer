@@ -44,6 +44,10 @@ a {
   color: red;
 }
 
+#orange{
+  color:#F25022;
+}
+
 .container {
   background: #fff;
   border-radius: 10px;
