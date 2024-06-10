@@ -6,15 +6,59 @@
     <title>Rgistra Producto</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='CSS/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/StyleRegistro.css'>
+    <script src="JS/scriptIndex4.js"></script>
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="menu">
+                    <img src="IMG/Imagen1.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Empresa X
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="Index4.html">Inicio</a>
+                        <a class="nav-link" href="#">Tablas</a>
+                        <a class="nav-link" href="https://facebook.com">Facebook</a>
+                        <a class="nav-link disabled">Deshabilitado</a>
+                    </div>
+                </div>
+                <label id="hola">HOLA, <strong id="name"></strong></label>
+                <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <img src="IMG/UserI.png" id="perfil"></a>
+                </a>
+            </div>
+        </nav>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header bg-dark">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">TU PERFIL</a></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                <center><p><img src="IMG/UserI.png" width="150" height="150"></p></center>
+                <p><strong>Tu correo: </strong><a href = "mailto: email"><strong id="email"></strong></a></p>
+                <p><strong class="laContra" id="password"></strong></p>
+              </div>
+            </div>
+            <div class="boton">
+                <center><a href="Index2.html"><button type="button" id="nuevo" class="btn btn-success">Cerrar Sesión</button></a></center>
+            </div>
+    </header>
     <main>
         <div class="container">
             <div class="row">
                 <div class="col-4 offset-4"><!--form-->
                     <center>
                         <img src="IMG/cajaIcon.png" alt="Logo provisional" width="75" height="75">
-                        <h1>BIENVENIDO</h1>
+                        <h1>REGISTRAR PRODUCTO</h1>
                     </center>
                     <form action="VerProducto.html" method="get" id="miFormulario">
                         <div class="form-group mt-3 mb-2">
@@ -37,7 +81,7 @@
                             </select>
                         </div>
                         <div id="nuevos"></div>
-                        <center><input class="btn btn-dark mr-2" type="submit" id="save" value="Registrar Personas" /></center>
+                        <center><input class="btn btn-dark mr-2" type="submit" id="save" value="Registrar Producto" /></center>
                     </form>
                 </div>
             </div>
