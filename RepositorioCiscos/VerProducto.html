@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ver Productos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/bootstrap.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="col col-md-12">
+        <h1>
+            <center>Productos disponibles</center>
+        </h1>
+          <table class="table table-bordered table-hover" id="tabla">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Proveedor</th>
+                <th scope="col">Fecha modif.</th>
+                <th scope="col">Sección</th>
+                <th scope="col">Importado</th>
+                <th scope="col">Acción</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+              <tr>
+                <th scope="row">1</th>
+                <td>Paquete plumas</td>
+                <td>10</td>
+                <td>$ 1099.99</td>
+                <td>Scribd</td>
+                <td>2024-06-20</td>
+                <td>A</td>
+                <td><a class="btn btn-link" onclick="eliminar(this);">Modificar</a></td>
+                <td><a class="btn btn-link" onclick="eliminar(this);">Eliminar</a></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Motocicleta Italika T-800</td>
+                <td>2</td>
+                <td>$ 42999.99</td>
+                <td>Italika</td>
+                <td>2024-07-12</td>
+                <td>B</td>
+                <td><a class="btn btn-link" onclick="modificar(this);">Modificar</a></td>
+                <td><a class="btn btn-link" onclick="eliminar(this);">Eliminar</a></td>
+              </tr>
+            </tbody>
+          </table>
+        <center><button class="btn btn-info" onclick="location.href='registrarProducto.html'">Agregar otro producto</button></center>
+        </div>
+      </div>
+      <script>
+        i = 3;
+        document.addEventListener('DOMContentLoaded', function() {
+            const productos = JSON.parse(localStorage.getItem('productos')) || [];
+            const cuerpoTabla = document.getElementById('cuerpoTabla');
+
+            productos.forEach((producto, index) => {
+                const row = cuerpoTabla.insertRow();
+                
+                row.innerHTML = `
+                    <th scope="row">${i}</th>
+                    <td>${producto.nombre}</td>
+                    <td>${producto.cantidad}</td>
+                    <td>$ ${producto.precio}</td>
+                    <td>${producto.proveedor}</td>
+                    <td>${producto.fecha}</td>
+                    <td>${producto.seccion}</td>
+                    <td><a class="btn btn-link" onclick="modificar(${index});">Modificar</a></td>
+                    <td><a class="btn btn-link" onclick="eliminar(${index});">Eliminar</a></td>
+                `;
+
+                i++;
+            });
+        });
+
+        function eliminar(index) {
+            let productos = JSON.parse(localStorage.getItem('productos'));
+            productos.splice(index, 1);
+            localStorage.setItem('productos', JSON.stringify(productos));
+            location.reload();
+        }
+
+        function modificar(index) {
+            window.location.href = `RegistrarProducto.html?index=${index}`;
+        }
+    </script>
+    <script src="JS/bootstrap.js"></script>
+    </div>
+</body>
+</html>
