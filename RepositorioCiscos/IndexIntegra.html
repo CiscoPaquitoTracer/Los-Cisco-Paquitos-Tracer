@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Inicio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/StyleLogin.css'>
+    <script src="JS/scriptIndex4.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="menu" id="textheader">
+                    <img src="IMG/cajaIcon.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-center">
+                    SISTEMA DE GESTIÓN DE ALMACÉN
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <!--<div class="row">-->
+                <div class="col-4 offset-4"><!--form-->
+                    <center>
+                        <img src="IMG/cajaIcon.png" alt="Logo provisional" width="120" height="120">
+                    </center>
+                    <div class="form-container sign-in-container">
+                    <form action="#" method="post" id="miFormulario">
+                        <h1 id="tituloLogin">INICIAR SESIÓN AHORA</h1>
+                        <div class="form-group mt-3 mb-2">
+                            <label for="nombre">Correo electrónico:* </label>
+                            <input class="form-control" id="nombre" type="text" name="nombre" placeholder="Ingresa el correo electrónico">
+                            <label for="contra">Contraseña:* </label>
+                            <input class="form-control" id="contra" type="password" name="contra" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <div id="nuevos"></div>
+                        <center><input class="btn btn-info mt-3 mb-2" type="submit" id="enter" value="INICIAR SESIÓN" /></center>
+                    </form>
+                    </div>
+                <!--</div>-->
+            </div>
+        </div>
+    </main>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const index = urlParams.get('index');
+        const productos = JSON.parse(localStorage.getItem('productos')) || [];
+
+        if (index !== null) {
+            const producto = productos[index];
+            document.getElementById('nombre').value = producto.nombre;
+            document.getElementById('cantidad').value = producto.cantidad;
+            document.getElementById('precio').value = producto.precio;
+            document.getElementById('proveedor').value = producto.proveedor;
+            document.getElementById('fecha').value = producto.fecha;
+            document.getElementById('seccion').value = producto.seccion;
+        }
+
+        document.getElementById('miFormulario').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const producto = {
+                nombre: document.getElementById('nombre').value,
+                cantidad: document.getElementById('cantidad').value,
+                precio: document.getElementById('precio').value,
+                proveedor: document.getElementById('proveedor').value,
+                fecha: document.getElementById('fecha').value,
+                seccion: document.getElementById('seccion').value
+            };
+
+            if (index !== null) {
+                productos[index] = producto;
+            } else {
+                productos.push(producto);
+            }
+
+            localStorage.setItem('productos', JSON.stringify(productos));
+
+            window.location.href = 'VerProducto.html';
+        });
+    </script> 
+    <script src='JS/bootstrap.js'></script>
+</body>
+</html>
