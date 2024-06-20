@@ -1,17 +1,28 @@
-header{
+@font-face 
+{
+    font-family: 'Inter';
+    src: url('Inter.ttf') 
+}
+
+header
+{
     background-color: #1D3557;
 }
 
-#textheader{
+#textheader
+{
     color: white;
     font-weight: 800;
 }
 
-body{
+body
+{
     background-color: #F1FAEE;
+    font-family: 'Inter';
 }
 
-.sign-in-container {
+.sign-in-container
+{
     background-color: #FFFFFF;
     width: 100%;
     display: flex;
@@ -25,12 +36,14 @@ body{
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0, 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-#tituloLogin{
+#tituloLogin
+{
     font-size: 32px;
     font-weight: 800;
 }
 
-#enter{
+#enter
+{
     color: #FFFFFF;
     font-weight: bold;
     border-radius: 18px;
@@ -38,28 +51,136 @@ body{
     width: 220px;
 }
 
-#enter:hover{
+#enter:hover
+{
     transform: scale(1.2);
 }
 
-#enter:active{
+#enter:active
+{
     border-color: #44DDBB;
     background-color: #44DDBB;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-input[type="text"]{
+input[type="email"]
+{
     background-color: #D9D9D9;
     color: #7E7E7E;
     border-radius: 15px;
 }
 
-input[type="password"]{
+input[type="password"]
+{
     background-color: #D9D9D9;
     color: #7E7E7E;
     border-radius: 18px;
 }
 
-label{
+label
+{
     color: #D9D9D9;
+}
+
+a 
+{
+    color: #228be6;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}  
+
+/* Para el inicio */
+
+#textheader2
+{
+    color: white;
+    font-weight: 800;
+    margin-left: 150px;
+}
+
+#nav
+{
+    height: 60px;
+}
+
+#UserData
+{
+    margin-left: auto;
+}
+
+#tituloInicio
+{
+    font-size: 48px;
+    letter-spacing: 27%;
+    font-weight: normal;
+}
+
+#btns
+{
+    height: 134px;
+    width: 198px;
+}
+
+#contInicio
+{
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 45px 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 18px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0, 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#theRow
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#theRow2
+{
+    padding: 0 33.9px;
+}
+
+#btnAdmin
+{
+    color:#000;
+    background-color: #D9D9D9;
+    border-color:#D9D9D9;
+    border-radius: 60px;
+    width: 176px;
+}
+
+#btnAdmin:active
+{
+    border-color: #DFDFFF;
+    background-color: #DFDFFF;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#exit
+{
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 18px;
+    font-size: small;
+    width: 190px;
+}
+
+#exit:hover
+{
+    transform: scale(1.2);
+}
+
+#exit:active
+{
+    border-color: #44DDBB;
+    background-color: #44DDBB;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
