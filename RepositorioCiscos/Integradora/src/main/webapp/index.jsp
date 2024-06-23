@@ -10,33 +10,38 @@
   <link rel='stylesheet' type='text/css' media='screen' href='CSS/StyleLogin.css'>
 </head>
 <body>
-<header>
+<header class="mb-auto">
   <nav class="navbar-brand">
     <div class="container-fluid">
-      <a class="navbar-brand" href="menu" id="textheader">
-        <img src="IMG/cajaIcon.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-center">
+      <p class="navbar-brand" id="textheader">
+        <img src="IMG/cajaIcon.png" alt="Logo" width="60" height="60">
         SISTEMA DE GESTIÓN DE ALMACÉN
-      </a>
+      </p>
     </div>
   </nav>
 </header>
-<main>
-  <div class="container">
-    <!--<div class="row">-->
-    <div class="col-4 offset-4"><!--form-->
+<main class="form-signin w-100 m-auto">
+  <div class="container-fluid">
+    <div class="col-xs-3 offset-1 col-sm-6 offset-2 col-md-4 offset-2 col-lg-4 offset-2 col-xl-4 offset-4"><!--form-->
       <center>
         <img src="IMG/cajaIcon.png" alt="Logo provisional" width="120" height="120">
       </center>
       <div class="form-container sign-in-container">
-        <form action="Inicio.jsp" method="post" id="miFormulario">
+        <form class="cover-container" action="Inicio.jsp" method="post" id="miFormulario">
           <h1 id="tituloLogin">INICIAR SESIÓN AHORA</h1>
           <div class="form-group mt-3 mb-2">
             <label for="correo">Correo electrónico:* </label>
-            <input class="form-control" id="correo" type="email" name="correo" required placeholder="Ingresa el correo electrónico">
+            <div class="">
+              <input class="form-control" id="correo" type="email" name="correo" required placeholder="Ingresa el correo electrónico">
+            </div>
             <label for="contra">Contraseña:* </label>
-            <input class="form-control" id="contra" type="password" name="contra" required placeholder="Ingresa tu contraseña">
+            <div class="">
+              <input class="form-control" id="contra" type="password" name="contra" required placeholder="Ingresa tu contraseña">
+            </div>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+            <br>
+            <center><p><input class="w-100 btn btn-lg btn btn-info mt-3 mb-0" type="submit" id="enter" value="INICIAR SESIÓN" /></p></center>
           </div>
-          <center><input class="btn btn-info mt-3 mb-2" type="submit" id="enter" value="INICIAR SESIÓN" /></center>
         </form>
       </div>
       <!--</div>-->
@@ -44,5 +49,6 @@
   </div>
 </main>
 <script src='JS/bootstrap.js'></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

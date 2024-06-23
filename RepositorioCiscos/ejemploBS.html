@@ -94,27 +94,7 @@ body {
     
     
         <script src='js/bootstrap.js'></script>
-        <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
       </body>
-      <script>
-        getParameter = (key) => {
-    address = window.location.search; //url de la ventana actual 
-    //Objeto de tipo URLSearchParams
-    parameterList = new URLSearchParams(address); 
-    //Regresa el valor del parámetro “key”
-    return parameterList.get(key);
-    }
-    //correo
-    let correo = document.getElementById("email");
-    correo.innerText = getParameter("email1");
-    //Constraseña fuerte o debil
-    const contraseña = getParameter("pswrd1");
-    let password = document.getElementById("password");
-    if (contraseña.length < 5) {
-        password.innerText = "Las contraseñas coinciden. Pero tu contraseña es débil";
-        } else {
-        password.innerText = "Las contraseñas coinciden. Y tu contraseña es segura";
-    }
-      </script>
 </html>
