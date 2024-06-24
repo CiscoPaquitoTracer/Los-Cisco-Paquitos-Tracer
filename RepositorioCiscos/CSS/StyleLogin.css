@@ -114,6 +114,8 @@ rect:active
 #textheader2
 {
     margin-left: auto;
+    font-size: 30px;
+    margin-right: auto;
     color: white;
     font-weight: 800;
 }

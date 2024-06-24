@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="es-MX">
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -13,21 +13,22 @@
 <header class="mb-auto">
   <nav class="navbar-brand">
     <div class="container-fluid">
-      <p class="navbar-brand" id="textheader">
+      <p class="navbar-brand" id="textheader2">
         <img src="IMG/cajaIcon.png" alt="Logo" width="60" height="60">
-        SISTEMA DE GESTIÓN DE ALMACÉN
+        GESTIÓN DE ALMACÉN
       </p>
     </div>
   </nav>
 </header>
-<main class="form-signin w-100 m-auto">
+<main class="form-signin w-auto m-auto">
   <div class="container-fluid">
-    <div class="col-xs-3 offset-1 col-sm-6 offset-2 col-md-4 offset-2 col-lg-4 offset-2 col-xl-4 offset-4"><!--form-->
+    <!--<div class="row">-->
+    <div class="col-6 offset-0 col-xs-4 offset-2 col-sm-4 offset-1 col-md-4 offset-2 col-lg-4 offset-2 col-xl-4 offset-4"><!--form-->
       <center>
         <img src="IMG/cajaIcon.png" alt="Logo provisional" width="120" height="120">
       </center>
       <div class="form-container sign-in-container">
-        <form class="cover-container" action="Inicio.jsp" method="post" id="miFormulario">
+        <form class="cover-container" action="log-in" method="post" id="miFormulario">
           <h1 id="tituloLogin">INICIAR SESIÓN AHORA</h1>
           <div class="form-group mt-3 mb-2">
             <label for="correo">Correo electrónico:* </label>
