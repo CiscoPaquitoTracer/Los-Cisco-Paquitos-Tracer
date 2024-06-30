@@ -1,5 +1,6 @@
 package mx.edu.utez.integradorademopizza.Dao;
 
+import mx.edu.utez.integradorademopizza.Model.Ingrediente;
 import mx.edu.utez.integradorademopizza.Model.Proveedor;
 import mx.edu.utez.integradorademopizza.Utils.DatabaseConnectionManager;
 
@@ -10,26 +11,31 @@ import java.sql.SQLException;
 
 public class IngredienteDao
 {
-    public Proveedor getOne(int idProveedor)
+    public Ingrediente getOne(int idIngrediente)
     {
-        Proveedor prov = new Proveedor();
-        String query ="select nombre from proveedor where id = ?";
+        Ingrediente ingre = new Ingrediente();
+        String query ="select nombre, proveedor from ingrediente where id = ?";
+        String query2 ="update ingrediente set proveedor = (select nombre from proveedor where idProveedor = ?) where id = ?";
         //String query = "select * from ingredientes where nombre_Proveedor = '" + nombre_Proveedor + "'";
         try{
             //1) conectarnos a la BD
             Connection con = DatabaseConnectionManager.getConnection();
             //2) Configurar el query y ejecutarlo
             PreparedStatement ps = con.prepareStatement(query);
-            ps.setInt(1,idProveedor);
+            PreparedStatement psi = con.prepareStatement(query2);
+            ps.setInt(1,idIngrediente);
             ResultSet rs = ps.executeQuery();
+            ResultSet rs2 = psi.executeQuery();
             //3) Obtener la información
             if(rs.next()){
                 //Entonces llenamos la información del usuario
-                u.setNombre_usuario(rs.getString("nombre"));
+                ingre.setIdIngrediente(rs.getInt("id"));
+                ingre.setNombreIngrediente(rs.getString("nombreIngrediente"));
+                ingre.setProveedorIngrediente(rs.getInt("ProveedorIngrediente"));
             }
         } catch(SQLException e){
             e.printStackTrace();
         }
-        return prov;
+        return ingre;
     }
 }
