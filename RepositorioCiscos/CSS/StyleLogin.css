@@ -44,6 +44,8 @@ body
 
 #enter
 {
+    background-color: #E63946;
+    border-color: #E63946;
     color: #FFFFFF;
     font-weight: bold;
     border-radius: 18px;
@@ -58,8 +60,8 @@ body
 
 #enter:active
 {
-    border-color: #44DDBB;
-    background-color: #44DDBB;
+    border-color: #D62828;
+    background-color: #D62828;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -191,6 +193,8 @@ rect:active
 
 #exit
 {
+    background-color: #E63946;
+    border-color: #E63946;
     color: #FFFFFF;
     font-weight: bold;
     border-radius: 18px;
@@ -205,8 +209,8 @@ rect:active
 
 #exit:active
 {
-    border-color: #44DDBB;
-    background-color: #44DDBB;
+    border-color: #D62828;
+    background-color: #D62828;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 

@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                <a class="content" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect y="34.7727" width="45" height="10.2273" rx="5.11364" fill="white"/>
                         <rect y="17.3864" width="45" height="10.2273" rx="5.11364" fill="white"/>
@@ -31,7 +31,7 @@
         </nav>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header bg-dark">
-                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"
+                <svg class="img-fluid" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"
                 data-bs-dismiss="offcanvas">
                     <rect y="34.7727" width="45" height="10.2273" rx="5.11364" fill="#FFDF8E"/>
                     <rect y="17.3864" width="45" height="10.2273" rx="5.11364" fill="#FFDF8E"/>
@@ -53,29 +53,31 @@
     </header>
     <main>
     <div class="container-fluid">
-        <div class="col-8 offset-1 col-sm-4 offset-2 col-md-8 offset-2 col-lg-8 offset-2 col-xl-8 offset-2">
+        <div class="col-6 offset-3 col-xs-6 offset-3 col-sm-5 offset-3 col-md-4 offset-2 col-lg-6 offset-2 col-xl-6 offset-2">
             <br>
             <div class="container-fluid" id="contInicio">
-                <h1 id="tituloInicio" style="font-size: 4vw;">MENÚ DEL ALMACÉN</h1>
+                <div class="row featurette-heading fw-normal lh-1">
+                <h1 id="tituloInicio" style="font-size: 4vw; padding: auto;">MENÚ DEL ALMACÉN</h1>
+                </div>
                 <br>
                 <div class="row">
                 <div class="col">
                     <img class="img-fluid" id="btns" src="IMG/Btn3_Admin.png" alt="Gesionar usuarios">
-                    <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-100 btn btn-lg" style="font-size: 1.70vw;" id="btnAdmin">USUARIOS</button>
+                    <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-100 btn btn-sm" style="font-size: 1.70vw;" id="btnAdmin">USUARIOS</button>
                 </div>
                 <div class="col">
                     <img class="img-fluid" id="btns" src="IMG/Btn2_Admin.png" alt="ver historial">
-                    <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-100 btn btn-lg" style="font-size: 1.70vw;" id="btnAdmin">HISTORIAL</button>
+                    <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-100 btn btn-sm" style="font-size: 1.70vw;" id="btnAdmin">HISTORIAL</button>
                 </div>
                 <div class="col">
                     <img class="img-fluid" id="btns" src="IMG/Btn1_Admin.png" alt="ver almacen">
-                    <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-100 btn btn-lg" style="font-size: 1.70vw;" id="btnAdmin">ALMACÉN</button>
+                    <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-100 btn btn-sm" style="font-size: 1.70vw;" id="btnAdmin">ALMACÉN</button>
                 </div>
                 <br>
                 </div>
                 <br>
                 <div class="row" id="theRow">
-                    <a class="btn btn-info mt-2 mb-1" id="exit" href="IndexIntegra.html">SALIR</a>
+                    <a class="btn btn-info mt- mb-1" id="exit" href="IndexIntegra.html">SALIR</a>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@
         <img src="IMG/cajaIcon.png" alt="Logo provisional" width="120" height="120">
       </center>
       <div class="form-container sign-in-container">
-        <form class="cover-container" action="log-in" method="post" id="miFormulario">
+        <form class="cover-container" action="Inicio.jsp" method="post" id="miFormulario">
           <h1 id="tituloLogin">INICIAR SESIÓN AHORA</h1>
           <div class="form-group mt-3 mb-2">
             <label for="correo">Correo electrónico:* </label>
