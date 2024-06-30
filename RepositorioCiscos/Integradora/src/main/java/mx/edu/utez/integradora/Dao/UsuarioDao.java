@@ -44,7 +44,7 @@ public class UsuarioDao {
 
     public ArrayList<Usuario> getAll(){
         ArrayList<Usuario> Lista = new ArrayList<>();
-        String query = "select * from usuarios";
+        String query = "select * from Usuarios";
 
         try{
             //1) conectarnos a la BD
@@ -72,7 +72,7 @@ public class UsuarioDao {
     public boolean insertUsuario(Usuario u)
     {
         boolean respuesta = false;
-        String query = "insert into usuarios(nombre, contra, correo, tipo_cuenta) values(?,sha2(?,256),?,?)";
+        String query = "insert into Usuarios(nombre,contra,correo,tipo_cuenta) values(?,sha2(?,256),?,?)";
         try{
             Connection con = DatabaseConnectionManager.getConnection();
             PreparedStatement ps = con.prepareStatement(query);
