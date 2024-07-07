@@ -27,7 +27,7 @@ body
     width: 100%;
     display: flex;
     padding: 15px 50px;
-    height: 50%;
+    height: 45%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -91,8 +91,44 @@ a
     color: #228be6;
     font-size: 14px;
     text-decoration: none;
-    margin: 15px 10px;
+    margin: 0, 10px;
+    text-align: center;
 }  
+
+/* Media queries para responsividad */
+@media (max-width: 576px) {
+    .sign-in-container {
+        width: 120%;
+        padding: 0,5px;
+    }
+
+    #tituloLogin {
+        font-size: 28px;
+    }
+
+    #logito{
+        width: 100%;
+        display: flex;
+        padding: 0 25px;
+    }
+
+    #enter {
+        width: 100%;
+    }
+
+    input[type="email"], input[type="password"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #logito{
+        width: 100%;
+        display: flex;
+        padding:10%;
+    }
+}
 
 /* Para el inicio */
 

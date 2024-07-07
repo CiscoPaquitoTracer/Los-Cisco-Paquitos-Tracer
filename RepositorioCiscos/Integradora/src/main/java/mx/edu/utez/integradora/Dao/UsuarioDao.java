@@ -17,7 +17,7 @@ public class UsuarioDao {
     //con el fin de hacer el inicio de sesión
     public Usuario getOne(String correo_usuario, String contra){
         Usuario u = new Usuario();
-        String query = "select * from usuarios where correo = ? and contra = sha2(?)";
+        String query = "select * from sga.usuarios where correo = ? and contra = sha2(?)";
 
         try{
             //1) conectarnos a la BD
@@ -44,7 +44,7 @@ public class UsuarioDao {
 
     public ArrayList<Usuario> getAll(){
         ArrayList<Usuario> Lista = new ArrayList<>();
-        String query = "select * from usuarios";
+        String query = "select * from sga.usuarios";
 
         try{
             //1) conectarnos a la BD
@@ -72,7 +72,7 @@ public class UsuarioDao {
     public boolean insertUsuario(Usuario u)
     {
         boolean respuesta = false;
-        String query = "insert into usuarios(nombre,contra,correo,tipo_cuenta)values(?,sha2(?,256),?,?)";
+        String query = "insert into sga.usuarios(nombre,contra,correo,tipo_cuenta)values(?,sha2(?,256),?,?)";
         try{
             Connection con = DatabaseConnectionManager.getConnection();
             PreparedStatement ps = con.prepareStatement(query);

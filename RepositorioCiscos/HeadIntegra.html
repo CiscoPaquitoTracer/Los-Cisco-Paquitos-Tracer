@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Header</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/StyleLogin.css'>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="content" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="34.7727" width="45" height="10.2273" rx="5.11364" fill="white"/>
+                        <rect y="17.3864" width="45" height="10.2273" rx="5.11364" fill="white"/>
+                        <rect width="45" height="10.2273" rx="5.11364" fill="white"/>
+                    </svg>                        
+                </a>
+                <label id="textheader2">
+                    <img src="IMG/cajaIcon.png" alt="Logo" width="50" height="50">
+                    GESTIÓN DE ALMACÉN
+                </label>
+                <label id="UserData">¡Hola, <strong id="name">User</strong>!</label>
+                <div class="dropstart">
+                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="IMG/UserI.png" id="perfil" width="45" height="45" alt="Perfil">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><center><img src="IMG/UserI.png" id="perfil" width="35" height="35" alt="Perfil"></center></li>
+                    <li><center><label>¡Hola, <strong id="name">User</strong>!</label></center></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item active" href="#">Cerrar sesión</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header bg-dark">
+                <svg class="img-fluid" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"
+                data-bs-dismiss="offcanvas">
+                    <rect y="34.7727" width="45" height="10.2273" rx="5.11364" fill="#FFDF8E"/>
+                    <rect y="17.3864" width="45" height="10.2273" rx="5.11364" fill="#FFDF8E"/>
+                    <rect width="45" height="10.2273" rx="5.11364" fill="#FFDF8E"/>
+                </svg>                    
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">TU PERFIL</a></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    <div class="navbar-nav">
+                        <p class="nav-link active" aria-current="page" href="#"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="40" height="40" fill="url(#pattern0_115_142)"/>
+                            <defs>
+                            <pattern id="pattern0_115_142" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_115_142" transform="scale(0.0111111)"/>
+                            </pattern>
+                            <image id="image0_115_142" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO2csWoUURSGP1FimsDWKlZaxC42PoLaaKudlZWa0tbO5BGshOgLaOUTqGmMlY2VYmKpMRACikcGZkAHd7PZnJlz5u7/wd/ssCz349+7c7jLgBBCCCGE+JdFYB3YAb4Ca/VrwpEzwFvAWnkHnJdpH1aAT/+R3GQbuCLZx+MWsD9BcpMD4I5kH52T9R5sR8wT4NQMnzeXLAEvZpDc5BUwil5Edi4AH44huclHYDl6MVm5CnxzkNzkB3AjelHZuAv8dJTc5BfwMHpxGVgENjoQ3M7GFMPNwl8DUfv2ca2+PtghZLMHyU02688cx2F3OdX14oYQ6yg7E4abdpPbqcb+QXF7yiGkq4wbbqZ5b9FDiHWU9nBThOgl4GUCuZOGm8GLvug0hHSVZrgZtOjrwPcEMg/LtINSSlbrgcEKSipOA08TSLGSRY87CbFCkoLLwOcEMqxk0dFDiJUuOtsQYiWKHtU3/DZHGfUtOfsQYh0ON5f6knzN+STEBpbq5OZm15JLHEJshvwGHgEnvAVXpwvPEyzQkuWZ98nL4wSLsqSp3LixnWBBljTVyYxE073oL56i52koscitY6GWrS2EmL8h2JwljOiFm0THSzE1mnBh2jrIHe3RSPRg2qdGI9Hhe6ap0RLtSnRrTY2WaFeiW2tqtES7Et1aU6Ml2pXo1poaLdGuRLfW1GiJdiW6taZGS7Qr0a01NVqiXYluranREu1KdGtNjZZoV6Jba2q0RLsS3VpL/i2RaCSa6NambPRegsVbT9mNFN3nAwItOG8iRT9IIMB6yr3ox/q8TyDBOs5WhmeTnitc9hZwliRUzb5f72Ml/EDuAa/r7SK8yUIIIYQQQgghhBAk4w9m9qGhd3r3SQAAAABJRU5ErkJggg=="/>
+                            </defs>
+                            </svg>
+                                                      
+                            <strong>Inicio</strong></p>
+                        <p class="nav-link" href="#">Tablas</p>
+                        <p class="nav-link" href="https://facebook.com">Facebook</p>
+                        <p class="nav-link disabled">Deshabilitado</p>
+                    </div>  
+                </div>
+            </div>
+            <div class="boton">
+                <center><a href="Index2.html"><button type="button" id="nuevo" class="btn btn-success">Cerrar Sesión</button></a></center>
+            </div>
+    </header>
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+        </a>
+      
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/bootstrap.js"></script>
+</body>
+</html>
