@@ -13,6 +13,7 @@ public class Usuario implements Serializable {
     private String correo;
     private int tipo_usuario;
     private boolean estado;
+    private String codigo_usuario;
 
     public Usuario() {
     }
@@ -27,6 +28,17 @@ public class Usuario implements Serializable {
     }
 
     public Usuario(String nombreUser, String contra1User, String correoUser, int tipoUsuario) {
+    }
+
+    public Usuario(String codigo_usuario) {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre_usuario() {
@@ -68,4 +80,8 @@ public class Usuario implements Serializable {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
+
+    public String getCodigo_usuario() {return codigo_usuario;}
+
+    public void setCodigo_usuario(String codigo_usuario) {this.codigo_usuario = codigo_usuario;}
 }

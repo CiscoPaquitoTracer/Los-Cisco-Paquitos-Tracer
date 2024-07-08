@@ -1,3 +1,4 @@
+<%--suppress ALL --%>
 <%--
   Created by IntelliJ IDEA.
   User: Lenny
@@ -13,82 +14,46 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Inicio</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='CSS/bootstrap.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='CSS/StyleLogin.css'>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/bootstrap.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/StyleLogin.css">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="34.7727" width="45" height="10.2273" rx="5.11364" fill="white"/>
-                    <rect y="17.3864" width="45" height="10.2273" rx="5.11364" fill="white"/>
-                    <rect width="45" height="10.2273" rx="5.11364" fill="white"/>
-                </svg>
-            </a>
-            <label id="textheader2">
-                <img src="IMG/cajaIcon.png" alt="Logo" width="50" height="50">
-                GESTIÓN DE ALMACÉN
-            </label>
-            <label id="UserData">¡Bienvenido, <strong id="name">User</strong>!</label>
-            <a data-bs-toggle="#" href="#" role="button" aria-controls="#" >
-                <img src="IMG/UserI.png" id="perfil" width="45" height="45" alt="Perfil">
-            </a>
-        </div>
-    </nav>
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header bg-dark">
-            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"
-                 data-bs-dismiss="offcanvas">
-                <rect y="34.7727" width="45" height="10.2273" rx="5.11364" fill="#FFDF8E"/>
-                <rect y="17.3864" width="45" height="10.2273" rx="5.11364" fill="#FFDF8E"/>
-                <rect width="45" height="10.2273" rx="5.11364" fill="#FFDF8E"/>
-            </svg>
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">TU PERFIL</a></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div>
-                <center><p><img src="IMG/UserI.png" width="150" height="150"></p></center>
-                <p><strong>Tu correo: </strong><a href = "mailto: email"><strong id="email"></strong></a></p>
-                <p><strong class="laContra" id="password"></strong></p>
-            </div>
-        </div>
-        <div class="boton">
-            <center><a href="Index2.html"><button type="button" id="nuevo" class="btn btn-success">Cerrar Sesión</button></a></center>
-        </div>
-</header>
+<jsp:include page="/Templates/Header.jsp" />
 <main>
     <div class="container-fluid">
-        <div class="col-8 offset-1 col-sm-4 offset-2 col-md-8 offset-2 col-lg-8 offset-2 col-xl-8 offset-2">
+        <div class="col"></div>
+        <div class="col-8 offset-2">
             <br>
             <div class="container-fluid" id="contInicio">
-                <h1 id="tituloInicio" style="font-size: 4vw;">MENÚ DEL ALMACÉN</h1>
+                <div class="container-sm">
+                    <p style="font-size: 5vw;">MENÚ DEL ALMACÉN</p>
+                </div>
                 <br>
                 <div class="row">
                     <div class="col">
                         <img class="img-fluid" id="btns" src="IMG/Btn3_Admin.png" alt="Gesionar usuarios">
-                        <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-100 btn btn-lg" style="font-size: 1.70vw;" id="btnAdmin">USUARIOS</button>
+                        <button class="btn btn-secondary.btn-sm mt-1 mb-2 w-98 btn btn-sm" id="btnAdmin">USUARIOS</button>
                     </div>
                     <div class="col">
                         <img class="img-fluid" id="btns" src="IMG/Btn2_Admin.png" alt="ver historial">
-                        <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-100 btn btn-lg" style="font-size: 1.70vw;" id="btnAdmin">HISTORIAL</button>
+                        <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-98 btn btn-sm" id="btnAdmin">HISTORIAL</button>
                     </div>
                     <div class="col">
                         <img class="img-fluid" id="btns" src="IMG/Btn1_Admin.png" alt="ver almacen">
-                        <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-100 btn btn-lg" style="font-size: 1.70vw;" id="btnAdmin">ALMACÉN</button>
+                        <button class="btn btn-secondary.btn-sm mt-2 mb-3 w-98 btn btn-sm" id="btnAdmin">ALMACÉN</button>
                     </div>
                     <br>
                 </div>
                 <br>
                 <div class="row" id="theRow">
-                    <a class="btn btn-info mt-2 mb-1" id="exit" href="IndexIntegra.html">SALIR</a>
+                    <a class="btn btn-info mt- mb-1" id="exit" href="index.jsp">SALIR</a>
                 </div>
             </div>
         </div>
+        <div class="col"></div>
     </div>
 </main>
-<script src="JS/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/JS/popper.min.js"></script>
+<script src="${pageContext.request.contextPath}/JS/bootstrap.js"></script>
 </body>
 </html>
