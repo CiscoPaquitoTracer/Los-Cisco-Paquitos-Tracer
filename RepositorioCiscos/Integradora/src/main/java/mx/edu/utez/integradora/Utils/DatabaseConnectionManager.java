@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class DatabaseConnectionManager {
-    private static final String JDBC_URL = "jdbc:mysql://192.168.0.175:3306/SGA";
+    private static final String JDBC_URL = "jdbc:mysql://localhost/SGA";
     private static final String USERNAME = "HP-KENNY";
     private static final String PASSWORD = "2005";
     private static final HikariConfig config = new HikariConfig();

@@ -13,6 +13,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='CSS/StyleLogin.css'>
 </head>
 <body>
+        <!-- Importar iconos -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="bootstrap" viewBox="0 0 118 94">
           <title>Bootstrap</title>
@@ -75,32 +76,46 @@
         </symbol>
     </svg>
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="content" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect y="34.7727" width="45" height="10.2273" rx="5.11364" fill="white"/>
-                        <rect y="17.3864" width="45" height="10.2273" rx="5.11364" fill="white"/>
-                        <rect width="45" height="10.2273" rx="5.11364" fill="white"/>
-                    </svg>                        
-                </a>
-                <label id="textheader2" d-flex align-items-center mb-3 mb-md-0 me-md-auto>
-                    <img src="IMG/cajaIcon.png" alt="Logo" width="50" height="50">
-                    GESTIÓN DE ALMACÉN
-                </label>
-                <div class="dropstart">
-                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="IMG/UserI.png" id="perfil" width="45" height="45" alt="Perfil">
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><center><img src="IMG/UserI.png" id="perfil" width="35" height="35" alt="Perfil"></center></li>
-                    <li><center><label>¡Hola, <strong id="name">User</strong>!</label></center></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item active" href="#">Cerrar sesión</a></li>
-                </ul>
-                </div>
-            </div>
-        </nav>
+      <!-- Header -->
+      <div class="navbar-expand-lg">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <a id="botoncito" class="content" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+          <svg class="img-fluid" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="34.7727" width="45" height="10.2273" rx="5.11364" fill="white"/>
+            <rect y="17.3864" width="45" height="10.2273" rx="5.11364" fill="white"/>
+            <rect width="45" height="10.2273" rx="5.11364" fill="white"/>
+          </svg> 
+          </a>
+    
+          <label id="textheader2" class=" d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+            <img src="IMG/cajaIcon.png" alt="Logo" width="50" height="50">
+            GESTIÓN DE ALMACÉN
+          </label>
+    
+          <div class="col-md-3 text-end">                    
+            <div class="dropstart" id="w">
+              <a class="content" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+              <svg id="bt" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="23.1818" width="30" height="6.81818" rx="3.40909" fill="white"/>
+                <rect y="11.5909" width="30" height="6.81818" rx="3.40909" fill="white"/>
+                <rect width="30" height="6.81818" rx="3.40909" fill="white"/>
+              </svg>
+              </a>
+              <label for="button" id="UserData">¡Bienvenido!</label>
+              <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="IMG/UserI.png" id="perfil" width="45" height="45" alt="Perfil">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><center><img src="IMG/UserI.png" id="perfil" width="35" height="35" alt="Perfil"></center></li>
+                  <li><center><label>¡Hola, <strong id="name">User</strong>!</label></center></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item active" href="#">Cerrar sesión</a></li>
+              </ul>
+              </div>
+          </div>
+        </header>
+              <!-- Offcanvas -->
+      </div>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <svg class="img-fluid" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -160,6 +175,34 @@
             font-style: italic;
             text-align: center;
         }
+
+        @media (min-width: 577px) {
+          #textheader2{
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+          }
+          #bt{
+            display: none;
+          }
+          #botoncito{
+            margin-left: 10px;
+          }
+          #perfil
+          {
+            margin-right: 10px;
+          }
+        }
+        @media (max-width: 576px) {
+          #bt{
+            display: inline;
+          }
+          #botoncito{
+            display: none;
+          }
+      }
+
+/*Aqui terminan*/
     </style>
     <!--  Antes de añadir el header, recuerda que solo se cierra dicha etiqueta, body y html NO-->
     <script src="JS/popper.min.js"></script>

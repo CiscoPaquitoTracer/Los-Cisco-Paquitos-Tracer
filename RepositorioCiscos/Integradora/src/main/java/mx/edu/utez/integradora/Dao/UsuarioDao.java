@@ -56,6 +56,7 @@ public class UsuarioDao {
             while (rs.next()){
                 Usuario u = new Usuario();
                 //Entonces llenamos la información del usuario
+                u.setId(rs.getInt("id"));
                 u.setNombre_usuario(rs.getString("nombre"));
                 u.setContra(rs.getString("contra"));
                 u.setCorreo(rs.getString("correo"));

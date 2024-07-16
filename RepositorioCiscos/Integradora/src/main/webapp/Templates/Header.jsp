@@ -148,7 +148,7 @@
             <li><hr class="dropdown-divider"></li>
             <li><p><a class="dropdown-item" href="#"> <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#profile"/></svg> Mi perfil</a></p></li>
             <li><hr class="dropdown-divider"></li>
-            <li><p><a class="dropdown-item" href="#"><svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#truck"/></svg> Gestionar áreas de entrega</a></p></li>
+            <li><p><a class="dropdown-item" href="gestionUsuario.jsp"><svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#truck"/></svg> Gestionar áreas de entrega</a></p></li>
             <li><hr class="dropdown-divider"></li>
         </ul>
         <hr>
