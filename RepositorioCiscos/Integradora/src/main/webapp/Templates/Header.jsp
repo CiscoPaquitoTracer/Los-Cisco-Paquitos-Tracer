@@ -140,7 +140,7 @@
         <ul class="dropdown-menu dropdown-menu-dark col" style="display:contents;">
             <li><p><a class="dropdown-item" href="#"><svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg> Menu principal</a></p></li>
             <li><hr class="dropdown-divider"></li>
-            <li><p><a class="dropdown-item" href="#"><svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg> Usuarios</a></p></li>
+            <li><p><a class="dropdown-item" href="gestionUsuario.jsp"><svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg> Usuarios</a></p></li>
             <li><hr class="dropdown-divider"></li>
             <li><p><a class="dropdown-item" href="#"><svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table" fill="black"/></svg>  Revisar almacen</a></p></li>
             <li><hr class="dropdown-divider"></li>
