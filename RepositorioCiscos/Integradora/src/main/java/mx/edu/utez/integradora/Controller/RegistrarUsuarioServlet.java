@@ -22,7 +22,6 @@ public class RegistrarUsuarioServlet extends HttpServlet
             String contra1_user = req.getParameter("pass1");
             String contra2_user = req.getParameter("pass2");
             String correo_user = req.getParameter("correo");
-            boolean status_user = Boolean.parseBoolean(req.getParameter("status"));
             int tipo_usuario = Integer.parseInt(req.getParameter("tipo_usuario"));
                 //2) conectarme a la base de datos y buscar al usuario segun
                 // las credenciales del form
@@ -32,24 +31,18 @@ public class RegistrarUsuarioServlet extends HttpServlet
                 u.setContra(contra1_user);
                 u.setCorreo(correo_user);
                 u.setTipo_usuario(tipo_usuario);
-                u.setEstado(status_user);
                 UsuarioDao dao = new UsuarioDao();
                 //Mandar una respuesta
                 if (dao.insertUsuario(u)) {
                     //Mandar al usuario al inicio de sesión
-                    req.getSession().setAttribute("mensaje2","Si se registró");
+                    req.getSession().setAttribute("mensaje","Si se registró");
                     req.getSession().setAttribute("name",nombre_user);
-                    System.out.println("<p style=\"color: red;\">Usuario Registrado</p>");
-                    ruta = "gestionUsuario.jsp";
+                    System.out.println("<p style=\"color: red;\">Ususario Registrado</p>");
+                    ruta = "bienvenido.jsp";
                 } else {
                     //Mandar un mensaje de errror y regesar al formulario de registro
                     req.getSession().setAttribute("mensaje","No se pudo registrar");
-                    ruta = "registrarUsuario.jsp";
-                    System.out.println(nombre_user);
-                    System.out.println(contra1_user);
-                    System.out.println(correo_user);
-                    System.out.println(tipo_usuario);
-                    System.out.println(status_user);
+                    ruta = "index.jsp";
                     System.out.println("<p style=\"color: red;\">No se pudo, UnU</p>");
                 }
         }else if (operacion.equals("actualizar")){
@@ -59,24 +52,22 @@ public class RegistrarUsuarioServlet extends HttpServlet
             String correo = req.getParameter("correo");
             int tipo_usuario = Integer.parseInt(req.getParameter("tipo_usuario"));
             int id = Integer.parseInt(req.getParameter("id"));
-            boolean status = Boolean.parseBoolean(req.getParameter("status"));
             Usuario u = new Usuario();
             u.setNombre_usuario(nombre_usuario);
             u.setContra(pass);
             u.setCorreo(correo);
             u.setTipo_usuario(tipo_usuario);
             u.setId(id);
-            u.setEstado(status);
 
             UsuarioDao dao = new UsuarioDao();
             if(dao.update(u)){
                 //Si se hizo el update
                 ruta = "gestionUsuario.jsp";
-                req.getSession().setAttribute("mensaje2","Usuario Actualizado");
+                req.getSession().setAttribute("mensaje","Usuario Actualizado");
             }else{
                 //pues no y mando un error
                 req.getSession().setAttribute("mensaje","No se pudo actualizar");
-                ruta = "registrarUsuario.jsp";
+                ruta = "index.jsp";
             }
         }
         resp.sendRedirect(ruta);

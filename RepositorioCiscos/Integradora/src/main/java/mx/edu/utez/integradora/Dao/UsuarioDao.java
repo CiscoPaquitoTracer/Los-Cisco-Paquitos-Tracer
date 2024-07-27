@@ -73,7 +73,7 @@ public class UsuarioDao {
     public boolean insertUsuario(Usuario u)
     {
         boolean respuesta = false;
-        String query = "insert into usuarios(nombre,contra,correo,tipo_cuenta,estado)values(?,sha2(?,256),?,?,?)";
+        String query = "insert into usuarios(nombre,contra,correo,tipo_cuenta)values(?,sha2(?,256),?,?)";
         try{
             Connection con = DatabaseConnectionManager.getConnection();
             PreparedStatement ps = con.prepareStatement(query);
@@ -81,7 +81,6 @@ public class UsuarioDao {
             ps.setString(2,u.getContra());
             ps.setString(3,u.getCorreo());
             ps.setInt(4,u.getTipo_usuario());
-            ps.setBoolean(5,u.isEstado());
             if(ps.executeUpdate()==1){
                 respuesta = true;
             }
@@ -102,10 +101,10 @@ public class UsuarioDao {
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
                 u.setId(rs.getInt("id"));
-                u.setNombre_usuario(rs.getString("nombre"));
+                u.setNombre_usuario(rs.getString("nombre_usuario"));
                 u.setContra(rs.getString("contra"));
                 u.setCorreo(rs.getString("correo"));
-                u.setTipo_usuario(rs.getInt("tipo_cuenta"));
+                u.setTipo_usuario(rs.getInt("tipo_usuario"));
                 u.setEstado(rs.getBoolean("estado"));
             }
         }catch (SQLException e){
@@ -139,7 +138,7 @@ public class UsuarioDao {
 
     public boolean update(Usuario u) {
         boolean respuesta = false;
-        String query = "update usuarios set nombre = ?, contra = sha2(?,256), correo = ?, tipo_cuenta = ?, estado = ? where id = ?";
+        String query = "update usuarios set nombre = ?, contra = sha2(?,256), correo = ?, tipo_cuenta = ? where id = ?";
         try{
             Connection con = DatabaseConnectionManager.getConnection();
             PreparedStatement ps = con.prepareStatement(query);
@@ -147,8 +146,7 @@ public class UsuarioDao {
             ps.setString(2,u.getContra());
             ps.setString(3,u.getCorreo());
             ps.setInt(4,u.getTipo_usuario());
-            ps.setBoolean(5, u.isEstado());
-            ps.setInt(6,u.getId());
+            ps.setInt(5,u.getId());
             if(ps.executeUpdate()>0){
                 respuesta = true;
             }

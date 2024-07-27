@@ -44,8 +44,12 @@ public class GmailSender {
     private static Credential getCredentials(final NetHttpTransport httpTransport, GsonFactory jsonFactory)
             throws IOException {
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(jsonFactory,
+<<<<<<< HEAD
                 new InputStreamReader(Objects.requireNonNull(GmailSender.class.getResourceAsStream(""))));
         ///credentials.json
+=======
+                new InputStreamReader(Objects.requireNonNull(GmailSender.class.getResourceAsStream("/credentials.json"))));
+>>>>>>> 8ea08e5 (Hice arte)
         GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
                 httpTransport, jsonFactory, clientSecrets, Set.of(GMAIL_SEND))
                 .setDataStoreFactory(new FileDataStoreFactory(Paths.get(TOKENS_DIRECTORY_PATH).toFile()))

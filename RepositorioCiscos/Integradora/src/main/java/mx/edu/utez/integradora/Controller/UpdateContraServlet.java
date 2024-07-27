@@ -42,7 +42,7 @@ public class UpdateContraServlet extends HttpServlet
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-            req.getSession().setAttribute("mensaje2","¡Contraseña correctada!");
+            req.getSession().setAttribute("mensaje","¡Contraseña correctada!");
         }else{
             req.getSession().setAttribute("mensaje","No se pudo actualizar la contra");
             System.out.println("<p style=\"color: red;\">No se pudo, UnU</p>");

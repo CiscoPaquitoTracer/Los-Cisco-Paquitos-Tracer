@@ -22,13 +22,13 @@ public class EliminarUsuarioServlet extends HttpServlet
             session.setAttribute("usuario", u);
             UsuarioDao dao = new UsuarioDao();
             if (dao.delete(u)){
-                    req.getSession().setAttribute("mensaje2","Usuario eliminado");
+                    req.getSession().setAttribute("mensaje","Usuario eliminado");
                     System.out.println("<p style=\"color: red;\">Usuario Eliminado</p>");
                     ruta = "gestionUsuario.jsp";
             } else {
                     //Mandar un mensaje de errror y regesar al formulario de registro
                     req.getSession().setAttribute("mensaje","No se pudo eliminar el usuario");
-                    ruta = "gestionUsuario.jsp";
+                    ruta = "index.jsp";
                     System.out.println("<p style=\"color: red;\">No se pudo, UnU, XD</p>");
             }
             resp.sendRedirect(ruta);
